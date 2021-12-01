@@ -1,0 +1,15 @@
+.form-container{
+    width: 400 px; 
+    margin: 0 px auto; 
+    margin-top: 200 px
+}
+
+.form-field{ 
+    box-sizing: border-box;
+    padding: 0px 5px;
+    width: 50%;
+}
+   
+.button-row .mat-button-base {
+    margin: 8px 8px 8px 0;
+}

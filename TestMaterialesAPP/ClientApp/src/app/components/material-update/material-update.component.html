@@ -1,0 +1,89 @@
+<mat-card>
+    <div class="form-container">
+        <form [formGroup]="materialForm" (submit)="submit()">
+            <h5>Agregar material</h5>
+
+            <mat-form-field class="form-field">
+                <mat-label> Nombre
+                </mat-label>
+                <input matInput formControlName="nombreMaterial" required>
+                <mat-error
+                    *ngIf="materialForm.controls.nombreMaterial.touched && materialForm.controls.nombreMaterial.invalid">
+                    <span *ngIf="materialForm.controls.nombreMaterial.errors.required">Nombre requerido.</span>
+                </mat-error>
+            </mat-form-field>
+
+            <mat-form-field class="form-field">
+                <mat-label> Descripción
+                </mat-label>
+                <textarea matInput formControlName="descripcion" required></textarea>
+                <mat-error
+                    *ngIf="materialForm.controls.descripcion.touched && materialForm.controls.descripcion.invalid">
+                    <span *ngIf="materialForm.controls.descripcion.errors.required">Descripción requerida.</span>
+                </mat-error>
+            </mat-form-field>
+
+            <mat-form-field class="form-field">
+                <mat-label> Precio
+                </mat-label>
+                <input matInput type="number" formControlName="precio" required>
+                <mat-error *ngIf="materialForm.controls.precio.touched && materialForm.controls.precio.invalid">
+                    <span *ngIf="materialForm.controls.precio.errors.required">Precio requerido.</span>
+                </mat-error>
+            </mat-form-field>
+
+            <mat-form-field class="form-field">
+                <mat-select required formControlName="categoria">
+                    <mat-option>-- Seleccione una opción --</mat-option>
+                    <mat-option *ngFor="let cat of categorias" [value]="cat.idCategoria">
+                        {{cat.descripcion}}
+                      </mat-option>
+                </mat-select>
+                <mat-label>
+                    Categoría
+                </mat-label>
+                <mat-error *ngIf="materialForm.controls.categoria.touched && materialForm.controls.categoria.invalid">
+                    <span *ngIf="materialForm.controls.categoria.errors.required">Categoría requerido.</span>
+                </mat-error>
+            </mat-form-field>
+
+            <mat-form-field class="form-field">
+                <mat-label> Proveedor
+                </mat-label>
+                <input matInput formControlName="proveedor" required>
+                <mat-error *ngIf="materialForm.controls.proveedor.touched && materialForm.controls.proveedor.invalid">
+                    <span *ngIf="materialForm.controls.proveedor.errors.required">Proveedor requerido.</span>
+                </mat-error>
+            </mat-form-field>
+
+            <mat-form-field class="form-field">
+                <mat-select required formControlName="unidadMedida">
+                    <mat-option>-- Seleccione una opción --</mat-option>
+                    <mat-option *ngFor="let um of unidadesMedidas" [value]="um.idUnidadMedida">
+                        {{um.descripcion}}
+                      </mat-option>
+                </mat-select>
+                <mat-label>
+                    Unidad de medida
+                </mat-label>
+                <mat-error
+                    *ngIf="materialForm.controls.unidadMedida.touched && materialForm.controls.unidadMedida.invalid">
+                    <span *ngIf="materialForm.controls.unidadMedida.errors.required">Categoría requerido.</span>
+                </mat-error>
+            </mat-form-field>
+
+            <mat-form-field class="form-field">
+                <mat-label> Existencia
+                </mat-label>
+                <input matInput type="number" formControlName="existencia" required>
+                <mat-error *ngIf="materialForm.controls.existencia.touched && materialForm.controls.existencia.invalid">
+                    <span *ngIf="materialForm.controls.existencia.errors.required">Existencia requerida.</span>
+                </mat-error>
+            </mat-form-field> 
+            <div class="button-row text-right mt-2">
+                <button mat-raised-button color="primary" type="submit">Guardar</button>
+                <a mat-raised-button [routerLink]="['/']" color="primary">Regresar</a>
+            </div>
+        </form>
+    </div>
+</mat-card>

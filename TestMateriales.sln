@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30621.155
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestMaterialesAPP", "TestMaterialesAPP\TestMaterialesAPP.csproj", "{F3C82F04-4749-4AF6-AFF3-00C090BDEE8A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestMaterialesAPI", "TestMaterialesAPI\TestMaterialesAPI.csproj", "{90A7812A-48F4-44ED-AE71-A8678567D2CF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F3C82F04-4749-4AF6-AFF3-00C090BDEE8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3C82F04-4749-4AF6-AFF3-00C090BDEE8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3C82F04-4749-4AF6-AFF3-00C090BDEE8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3C82F04-4749-4AF6-AFF3-00C090BDEE8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90A7812A-48F4-44ED-AE71-A8678567D2CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90A7812A-48F4-44ED-AE71-A8678567D2CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90A7812A-48F4-44ED-AE71-A8678567D2CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90A7812A-48F4-44ED-AE71-A8678567D2CF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7718DBBD-B38A-4D59-9B19-D070E3C4CB41}
+	EndGlobalSection
+EndGlobal
